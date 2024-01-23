@@ -1,0 +1,52 @@
+main {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-areas:
+    "h h"
+    "n ar";
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0.2rem dotted #1f7a7a;
+  margin: 1rem auto;
+}
+
+tr,
+td,
+th {
+  border: 0.2rem dotted #1f7a7a;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "ar";
+  }
+
+  nav {
+    border: none;
+  }
+
+  nav ul {
+    background-color: #1f7a7a;
+  }
+
+  nav a {
+    color: #ffffe6;
+  }
+
+  .kep {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("./hatter.jpg");
+}
+
+main {
+  background-color: #ffffe6;
+  font-family: "Risque", cursive;
+  width: 90%;
+  max-width: 1260px;
+  min-width: 530px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.75fr 2.5fr 0.75fr;
+  grid-template-areas:
+    "h h h"
+    "n ar as";
+}
+
+header {
+  grid-area: h;
+  font-family: cursive;
+  background-color: #1f7a7a;
+  color: #ffffe6;
+  min-height: 8rem;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+
+nav {
+  grid-area: n;
+  padding: 1rem;
+  border-right: 0.2rem dotted #1f7a7a;
+}
+
+nav ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+aside {
+  grid-area: as;
+  padding: 1rem;
+  border-left: 0.2rem dotted #1f7a7a;
+}
+
+article {
+  grid-area: ar;
+  padding: 1rem;
+}
+
+h2 {
+  text-shadow: -1px 0 #1f7a7a, 0 1px #1f7a7a, 1px 0 #1f7a7a, 0 -1px #1f7a7a;
+  color: white;
+}
+
+p,
+h3 {
+  padding-top: 1rem;
+}
+
+.aside-div {
+  padding: 1rem;
+}
+
+.article-span {
+  font-weight: bold;
+}
+
+.kep {
+  background-color: #1f7a7a;
+  float: left;
+  margin: 2rem;
+  padding-top: 1rem;
+}
+
+.kep > img {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.kep > p {
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.aside-span {
+  color: #1f7a7a;
+}
+
+/* MOBIL NÉZET */
+
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "as"
+      "ar";
+  }
+
+  nav {
+    border: none;
+  }
+
+  nav ul {
+    background-color: #1f7a7a;
+  }
+
+  nav a {
+    color: #ffffe6;
+  }
+
+  .aside-div {
+    background-color: #1f7a7a;
+    color: #ffffe6;
+  }
+
+  aside {
+    border: none;
+  }
+
+  .aside-span {
+    color: #ffffe6;
+  }
+
+  .kep {
+    float: none;
+  }
+}
